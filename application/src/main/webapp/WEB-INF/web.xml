@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4" id="WebApp_ID">
+	<display-name>OnlineMedicineOrderingSystem</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>RUlogin</servlet-name>
+		<servlet-class>com.omos.control.RU_LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RUlogin</servlet-name>
+		<url-pattern>/rulog</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>PHlogin</servlet-name>
+		<servlet-class>com.omos.control.PH_LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>PHlogin</servlet-name>
+		<url-pattern>/phlog</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DMlogin</servlet-name>
+		<servlet-class>com.omos.control.DM_LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DMlogin</servlet-name>
+		<url-pattern>/dmlog</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SAlogin</servlet-name>
+		<servlet-class>com.omos.control.SA_LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SAlogin</servlet-name>
+		<url-pattern>/salog</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ADlogin</servlet-name>
+		<servlet-class>com.omos.control.AD_LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ADlogin</servlet-name>
+		<url-pattern>/adlog</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>DeliveryNoteInsert</servlet-name>
+		<servlet-class>com.omos.control.DeliveryNoteInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeliveryNoteInsert</servlet-name>
+		<url-pattern>/dninsert</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>createViewDM</servlet-name>
+		<servlet-class>com.omos.control.CreateViewDM</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>createViewDM</servlet-name>
+		<url-pattern>/dmcreateview</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeliveryNoteView</servlet-name>
+		<servlet-class>com.omos.control.DM_DN_View</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeliveryNoteView</servlet-name>
+		<url-pattern>/dnview</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- R. M. S. D. Rathnayake -->
+<!-- IT 22177414 -->
+
+<!-- Delivery Manager : view order -->
+	<servlet>
+		<servlet-name>dmViewOrder</servlet-name>
+		<servlet-class>com.omos.control.DM_ViewOrderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dmViewOrder</servlet-name>
+		<url-pattern>/dmViewOrder</url-pattern>
+	</servlet-mapping>
+
+<!-- Delivery Manager : create delivery note -->
+	<servlet>
+		<servlet-name>createDN</servlet-name>
+		<servlet-class>com.omos.control.DM_CreateDNServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>createDN</servlet-name>
+		<url-pattern>/createDN</url-pattern>
+	</servlet-mapping>
+
+<!-- Delivery Manager : view delivery note -->
+	<servlet>
+		<servlet-name>viewDN</servlet-name>
+		<servlet-class>com.omos.control.DM_ViewDNServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>viewDN</servlet-name>
+		<url-pattern>/viewDN</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Delivery Manager : update delivery note -->
+	<servlet>
+		<servlet-name>updateDN</servlet-name>
+		<servlet-class>com.omos.control.DM_UpdateDNServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateDN</servlet-name>
+		<url-pattern>/updateDN</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Delivery Manager : delete delivery note -->
+	<servlet>
+		<servlet-name>deleteDN</servlet-name>
+		<servlet-class>com.omos.control.DM_DeleteDNServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>deleteDN</servlet-name>
+		<url-pattern>/deleteDN</url-pattern>
+	</servlet-mapping>
+
+
+
+	
+	
+<!-- R. U. Fernando -->
+<!-- IT 22177414 -->
+
+<!-- Support Agent : View ticket in create reply page-->
+	<servlet>
+		<servlet-name>saViewTicket</servlet-name>
+		<servlet-class>com.omos.control.SA_ViewTicketServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>saViewTicket</servlet-name>
+		<url-pattern>/saViewTicket</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- Support Agent : Create reply -->
+	<servlet>
+		<servlet-name>createReply</servlet-name>
+		<servlet-class>com.omos.control.SA_CreateReplyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>createReply</servlet-name>
+		<url-pattern>/createReply</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Support Agent : View reply -->
+	<servlet>
+		<servlet-name>viewReply</servlet-name>
+		<servlet-class>com.omos.control.SA_ViewReplyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>viewReply</servlet-name>
+		<url-pattern>/viewReply</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Support Agent : View reply for update -->
+	<servlet>
+		<servlet-name>viewUpdateReply</servlet-name>
+		<servlet-class>com.omos.control.SA_ViewUpdateReplyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>viewUpdateReply</servlet-name>
+		<url-pattern>/viewUpdateReply</url-pattern> 
+	</servlet-mapping>
+	
+
+<!-- Support Agent : Update reply -->
+	<servlet>
+		<servlet-name>updateReply</servlet-name>
+		<servlet-class>com.omos.control.SA_UpdateReplyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateReply</servlet-name>
+		<url-pattern>/updateReply</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Support Agent : Delete reply -->
+	<servlet>
+		<servlet-name>deleteReply</servlet-name>
+		<servlet-class>com.omos.control.SA_DeleteReplyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>deleteReply</servlet-name>
+		<url-pattern>/deleteReply</url-pattern>
+	</servlet-mapping>
+
+
+
+<!-- D K S D Perera -->
+<!-- IT22128522 -->
+
+<!-- Pharmacist : View prescription submission  -->
+	<servlet>
+		<servlet-name>phViewPrescription</servlet-name>
+		<servlet-class>com.omos.control.PH_ViewPrescriptionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>phViewPrescription</servlet-name>
+		<url-pattern>/phViewPrescription</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Pharmacist : Create order  -->
+	<servlet>
+		<servlet-name>createOrder</servlet-name>
+		<servlet-class>com.omos.control.PH_CreateOrderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>createOrder</servlet-name>
+		<url-pattern>/createOrder</url-pattern>
+	</servlet-mapping>
+
+
+<!-- Pharmacist : View Order  -->
+	<servlet>
+		<servlet-name>viewOrder</servlet-name>
+		<servlet-class>com.omos.control.PH_ViewOrderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>viewOrder</servlet-name>
+		<url-pattern>/viewOrder</url-pattern>
+	</servlet-mapping>
+	
+
+<!-- Pharmacist : Update Order  -->
+	<servlet>
+		<servlet-name>updateOrder</servlet-name>
+		<servlet-class>com.omos.control.PH_UpdateOrderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateOrder</servlet-name>
+		<url-pattern>/updateOrder</url-pattern>
+	</servlet-mapping>
+	
+
+<!-- Pharmacist : Delete Order  -->
+	<servlet>
+		<servlet-name>deleteOrder</servlet-name>
+		<servlet-class>com.omos.control.PH_DeleteOrderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>deleteOrder</servlet-name>
+		<url-pattern>/deleteOrder</url-pattern>
+	</servlet-mapping>
+
+
+<!-- S N Palliyaguruge  -->
+<!--  IT22179258 -->
+
+<!-- delete support ticket  -->
+	<servlet>
+		<servlet-name>deleteRUsupTicket</servlet-name>
+		<servlet-class>com.omos.control.RU_DeleteSupportTicket</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>deleteRUsupTicket</servlet-name>
+		<url-pattern>/deleteRUsupTicket</url-pattern>
+	</servlet-mapping>
+
+
+<!-- create support ticket  -->
+	<servlet>
+		<servlet-name>regUserSupTicketServlet</servlet-name>
+		<servlet-class>com.omos.control.RU_CreateSupportTicket</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>regUserSupTicketServlet</servlet-name>
+		<url-pattern>/regUserSupTicketServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
